@@ -1,0 +1,7 @@
+<app-search (addTodo)="addTodo($event)"></app-search>
+<div *ngFor="let todo of Todos"  class="container">
+    <input class="item1" (change)="toToggle(todo)" type="checkbox" >
+    <app-tasktitle class="item2" [todo]="todo"></app-tasktitle>
+    <button  class="item3" (click)="deleteTodo(todo)">X</button>
+</div>
+
